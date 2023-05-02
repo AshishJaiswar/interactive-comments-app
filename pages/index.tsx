@@ -6,7 +6,7 @@ import PostComment from "../components/post_comment";
 
 const Home: NextPage = () => {
   return (
-    <main className="flex h-screen flex-col justify-end bg-very-light-grey p-4">
+    <main className="flex h-screen flex-col justify-end bg-very-light-grey p-4 ">
       <Head>
         <title>Interactive Comment App</title>
       </Head>

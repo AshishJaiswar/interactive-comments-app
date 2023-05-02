@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const PostComment: NextPage = () => {
   return (
-    <div className="grid-rows-commnet__container-row mt-2 grid grid-cols-commnet__container-col rounded bg-white p-2 sm:flex">
+    <div className="grid-rows-commnet__container-row grid grid-cols-commnet__container-col rounded bg-white p-2 sm:flex">
       <div className="order-1 my-auto h-7 w-7 sm:-order-none sm:my-0 sm:w-14">
         <Image
           src={`/avatars/image-juliusomo.webp`}
@@ -13,7 +13,7 @@ const PostComment: NextPage = () => {
         />
       </div>
       <textarea
-        className="col-span-3 mb-2 rounded-lg border border-solid border-light-grey px-4 py-2 outline-none hover:border-greyish-blue focus:border-greyish-blue sm:mx-3 sm:w-full"
+        className="col-span-3 mb-2 rounded-lg border border-solid border-light-grey px-4 py-2 outline-none transition-all hover:border-greyish-blue focus:border-greyish-blue sm:mx-3 sm:w-full"
         name="commnet__body"
         id="c_body"
         cols={30}
@@ -22,7 +22,7 @@ const PostComment: NextPage = () => {
         required
         maxLength={500}
       ></textarea>
-      <button className="order-1 col-start-3 col-end-4 h-9 w-16 rounded-md bg-moderate-blue text-xs text-white hover:opacity-90 active:ring-4 active:ring-light-greyish-blue sm:-order-none sm:w-28 sm:text-sm">
+      <button className="order-1 col-start-3 col-end-4 h-10 rounded-md bg-moderate-blue font-medium text-white transition-all hover:opacity-90 active:ring-4 active:ring-light-greyish-blue sm:-order-none sm:w-28">
         SEND
       </button>
     </div>

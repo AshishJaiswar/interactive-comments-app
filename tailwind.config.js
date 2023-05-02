@@ -47,7 +47,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         "commnet__container-row": "1fr 28px",
-        "commnet__container-col": "28px 1fr 64px",
+        "commnet__container-col": "28px 1fr 85px",
       },
       borderRadius: {
         "4xl": "2rem",
