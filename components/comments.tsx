@@ -5,18 +5,47 @@ import Image from "next/image";
 interface Props {
   username: string;
   date: string;
+  comment: string;
+  avatar: string;
 }
 
 const Comments: NextPage = () => {
   return (
     <div className="flex h-commnet__container flex-col-reverse overflow-auto">
-      <UserComment username="maxblagun" date="2 days ago" />
+      <UserComment
+        username="maxblagun"
+        date="1 min"
+        comment="I just tried the best new restaurant in town - their food is amazing!"
+        avatar="/avatars/image-maxblagun.png"
+      />
       <div className="mb-3 border-l-2 border-light-grey pl-3 sm:ml-9 sm:pl-9">
-        <Reply username="juliusomo" date="2 days ago" />
-        <Reply username="ramsesmiron" date="2 days ago" />
+        <Reply
+          username="juliusomo"
+          date="2 days ago"
+          comment="I need some book recommendations. What's the last great book you read?"
+          avatar="/avatars/image-juliusomo.png"
+        />
+        <Reply
+          username="ramsesmiron"
+          date="2 days ago"
+          comment="I'm working on a new art project, and I'm feeling so inspired."
+          avatar="avatars\image-ramsesmiron.png"
+        />
       </div>
-      <UserComment username="maxblagun" date="2 days ago" />
-      <UserComment username="amyrobson" date="1 min ago" />
+      <UserComment
+        username="maxblagun"
+        date="2 days ago"
+        comment=" Woah, your project looks awesome! How long have you been coding for?
+          I'm still new, but think I want to dive into React as well soon.
+          Perhaps you can give me insight on where i can learn React? Thanks"
+        avatar="/avatars/image-maxblagun.png"
+      />
+      <UserComment
+        username="amyrobson"
+        date="3 days ago"
+        comment="Has anyone else watched that new series on Netflix? It's so addictive!"
+        avatar="/avatars/image-amyrobson.png"
+      />
     </div>
   );
 };
@@ -37,7 +66,7 @@ const UserComment: NextPage<Props> = (props) => {
         <div className="flex">
           <div className="h-7 w-7">
             <Image
-              src={`/avatars/image-juliusomo.webp`}
+              src={props.avatar}
               alt="Picture of the author"
               width="64px"
               height="64px"
@@ -48,11 +77,7 @@ const UserComment: NextPage<Props> = (props) => {
           </span>
           <span className="pl-2 text-greyish-blue">{props.date}</span>
         </div>
-        <p className="pt-3 text-greyish-blue">
-          Woah, your project looks awesome! How long have you been coding for?
-          I'm still new, but think I want to dive into React as well soon.
-          Perhaps you can give me insight on where i can learn React? Thanks
-        </p>
+        <p className="pt-3 text-greyish-blue">{props.comment}</p>
       </div>
 
       <button className="order-1 col-start-3 col-end-4 h-9 w-20 text-right font-medium text-moderate-blue hover:opacity-90 sm:-order-none sm:w-28">
@@ -94,11 +119,7 @@ const Reply: NextPage<Props> = (props) => {
           </span>
           <span className="pl-2 text-greyish-blue">{props.date}</span>
         </div>
-        <p className="pt-3 text-greyish-blue">
-          Woah, your project looks awesome! How long have you been coding for?
-          I'm still new, but think I want to dive into React as well soon.
-          Perhaps you can give me insight on where i can learn React? Thanks
-        </p>
+        <p className="pt-3 text-greyish-blue">{props.comment}</p>
       </div>
 
       <button className="order-1 col-start-3 col-end-4 h-9 w-20 text-right font-medium text-moderate-blue hover:opacity-90 sm:-order-none sm:w-28">
